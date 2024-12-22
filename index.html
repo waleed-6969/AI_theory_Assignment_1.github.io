@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Graph Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .controls {
+            width: 300px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input {
+            padding: 5px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+        #result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <div class="input-group">
+                <h3>Add Path</h3>
+                <input type="text" id="fromCity" placeholder="From City">
+                <input type="text" id="toCity" placeholder="To City">
+                <input type="number" id="distance" placeholder="Distance">
+                <button id="addPath">Add Path</button>
+            </div>
+            <div class="input-group">
+                <h3>Find Path</h3>
+                <input type="text" id="startCity" placeholder="Start City">
+                <input type="text" id="endCity" placeholder="End City">
+                <button id="bfsButton">BFS</button>
+                <button id="dfsButton">DFS</button>
+                <button id="ucsButton">UCS</button>
+            </div>
+            <button id="resetButton">Reset</button>
+            <div id="result"></div>
+        </div>
+        <canvas id="graphCanvas" width="600" height="400"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
